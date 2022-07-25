@@ -1,0 +1,4 @@
+. {{ caminho_base }}/venv/bin/activate
+python {{ caminho_base }}/manage.py migrate
+python {{ caminho_base }}/manage.py loaddata clientes.json
+nohup python {{ caminho_base }}/manage.py runserver 0.0.0.0:8000 &
